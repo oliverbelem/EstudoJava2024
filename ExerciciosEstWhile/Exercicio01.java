@@ -21,10 +21,7 @@ public class Exercicio01 {
 		// Teste: delimitar tentativas
 		for (int i=0; i<3 && Senha != 2002; i++) {
 						
-			if (Senha == 2002) {
-				break;
-			}
-			else {
+			if (Senha != 2002) {
 			System.out.print("Senha errada, digite novamente: ");
 			Senha = senha.nextInt();
 			}
