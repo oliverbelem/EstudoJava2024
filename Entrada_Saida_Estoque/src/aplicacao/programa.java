@@ -33,15 +33,16 @@ public class programa {
 		
 		System.out.println("Dados do produto: " + Produto);
 		System.out.println();
-		//	Função de escolha adicionada a parte do exercicio por mim mesmo:
 		
-		int validacao = 1;
+		//	Função de validao adicionada a parte do exercicio por mim mesmo:
 		
-		while (validacao == 1 || validacao == 2 || validacao !=3) {
+		int validacao = 1; // Aqui inicia a validacao, com o '1' para que possa entrar no while
+		
+		while (validacao == 1 || validacao == 2 || validacao !=3) { //while testa as condições de reentrada ou saida do sistema
 			System.out.print("Escolha o se quer Adicionar (1) ou Remover (2) o produto, ou sair (3): ");
 			validacao = sc.nextInt();
 			
-			if(validacao == 1) {
+			if(validacao == 1) { //não é necessario 'break;' pois o while testará de novo as condições da variavel 'validacao' 
 				
 				System.out.println();
 				System.out.print("Insira a quantidade de produtos a serem adicionados: ");
@@ -62,7 +63,7 @@ public class programa {
 				System.out.println("Atualização dos dados: " + Produto);
 				System.out.println();
 								
-			} else if (validacao != 1 && validacao != 2 && validacao != 3) {
+			} else if (validacao != 1 && validacao != 2 && validacao != 3) { //criado para servir de escape caso alguma tecla fora do menu seja selecionada, evitando erros ou fechamento abrupto
 				
 				System.out.println("");
 				System.out.println("Número fora dos padrões, tente novamente...");
@@ -73,7 +74,7 @@ public class programa {
 		
 		System.out.println();
 		System.out.println("Programa Encerrado, os dados atuais do fechamento são: ");
-		System.out.println(Produto);
+		System.out.println(Produto); //deixa a atulização baseado em todo o tempo que o programa rodou, como um "fechamento"
 	}
 
 }
