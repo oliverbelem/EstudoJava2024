@@ -15,11 +15,11 @@ public class produtos {
 		this.quantidade += quantidade; //aqui é especificado(pelo this) que o que deve ser acessadoé o atributo da classe.
 	}
 
-	public void removerProdutos(int quantidade) {
+	public void remocaoProdutos(int quantidade) {
 		this.quantidade -= quantidade;
 	}
 	
 	public String toString() {
-		return nome + ", R$" + String.format("%.2f", preco) + ", " + quantidade + "unidades. Valor total: " + String.format("%.2f", valorTotalEstoque()); 
+		return nome + ", R$" + String.format("%.2f", preco) + ", " + quantidade + " unidades. Valor total: R$" + String.format("%.2f", valorTotalEstoque()); 
 	}
 }
